@@ -1,6 +1,6 @@
 # Swagger Node Client
 
-Create clients for [Swagger API Specifications](https://github.com/wordnik/swagger-spec/blob/master/versions/1.2.md).
+Create client APIs for [Swagger API Specifications](https://github.com/wordnik/swagger-spec/blob/master/versions/1.2.md).
 
 Given a schema object, this tool returns an api object which can be used to interact with the API server
 described by the schema. The schema can easily be generated using  [fetch-swagger-schema](https://github.com/signalfuse/fetch-swagger-schema)).
@@ -14,6 +14,11 @@ by using swaggerNodeClient:
 // Assuming the variable schema exists
 var swaggerNodeClient = require('swagger-node-client');
 var api = swaggerNodeClient(schema);
+
+// for apiKey authorization use: api.auth('my-token')
+// for basicAuth use: api.auth('username', 'password')
+// authorization may be set for any level (api, api.resource, or api.operation)
+
 api.pet.getPetById(id).then(function(pet){
   console.log(pet);
 });

@@ -1,6 +1,6 @@
 {
   "name": "swagger-node-client",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Creates client APIs for [Swagger API Specifications]",
   "keywords": [],
   "main": "./src/client.js",
@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/signalfx/swagger-node-client",
   "dependencies": {
-    "swagger-client-generator": "^0.2.0",
+    "swagger-client-generator": "^0.2.10",
     "request": "^2.40.0",
     "es6-promise": "^1.0.0"
   }
